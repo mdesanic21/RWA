@@ -1,0 +1,39 @@
+<header><h1>TV - Serije </h1></header>
+<div *ngIf="isNotUser">
+<nav>
+    <ul>
+        <li><a routerLink="/prijava" routerLinkActive="active" ariaCurrentWhenActive="page">Prijava</a></li>
+        <li><a routerLink="/dokumentacija" routerLinkActive="active" ariaCurrentWhenActive="page">Dokumentacija</a></li>
+    </ul>
+</nav>
+</div>
+<div *ngIf="isAdmin" class="navigation-container">
+  <nav>
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Početna</a></li>
+      <li><a routerLink="/korisnici" routerLinkActive="active" ariaCurrentWhenActive="page">Korisnici</a></li>
+      <li><a routerLink="/profil" routerLinkActive="active" ariaCurrentWhenActive="page">Moj profil</a></li>
+      <li><a routerLink="/registracija" routerLinkActive="active" ariaCurrentWhenActive="page">Registriracija</a></li>
+      <li><a routerLink="/dokumentacija" routerLinkActive="active" ariaCurrentWhenActive="page">Dokumentacija</a></li>
+      <li class="right-items"><span>{{ korime }}</span></li>
+      <li class="right-items"><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="odjava()">Odjava</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div *ngIf="isNotAdmin" class="navigation-container">
+  <nav>
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Početna</a></li>
+      <li><a routerLink="/profil" routerLinkActive="active" ariaCurrentWhenActive="page">Moj profil</a></li>
+      <li><a routerLink="/dokumentacija" routerLinkActive="active" ariaCurrentWhenActive="page">Dokumentacija</a></li>
+      <li class="right-items"><span>{{ korime }}</span></li>
+      <li class="right-items"><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="odjava()">Odjava</a></li>
+    </ul>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
+<footer>
+  Autor: Matej Desanić &copy; {{ 2024 }}
+</footer>

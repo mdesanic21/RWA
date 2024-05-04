@@ -1,0 +1,20 @@
+<h2>Registracija korisnika</h2>
+<form #registracijaForm="ngForm" (ngSubmit)="submitForm()" class="form-container">
+  <label><strong>Ime:</strong></label>
+  <input [(ngModel)]="korisnik!.ime" name="ime" required>
+
+  <label><strong>Prezime:</strong></label>
+  <input [(ngModel)]="korisnik!.prezime" name="prezime" required>
+
+  <label><strong>Korisničko ime:</strong></label>
+  <input [(ngModel)]="korisnik!.korime" name="korime" required>
+
+  <label><strong>Email:</strong></label>
+  <input [(ngModel)]="korisnik!.email" name="email" required>
+
+  <label><strong>Lozinka:</strong></label>
+  <input [(ngModel)]="korisnik!.lozinka" name="lozinka" required>
+
+  <button type="submit">Registriraj</button>
+</form>
+

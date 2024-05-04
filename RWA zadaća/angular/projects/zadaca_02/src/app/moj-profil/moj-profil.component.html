@@ -1,0 +1,12 @@
+<div *ngIf="korisnik" class="details-container">
+    <h2>Detalji korisnika</h2>
+    <p><strong>Ime:</strong> {{ korisnik!.ime }}</p>
+    <p><strong>Prezime:</strong> {{ korisnik!.prezime }}</p>
+    <p><strong>Korisničko ime:</strong> {{ korisnik!.korime }}</p>
+    <p><strong>Email:</strong> {{ korisnik!.email }}</p>
+    <button (click)="azurirajKorisnikaNav()">Ažuriraj</button>
+  </div>
+  
+  <div *ngIf="!korisnik">
+    <p>Korisnik nije pronađen.</p>
+  </div>

@@ -1,0 +1,150 @@
+<!-- your-component.component.html -->
+
+<section>
+    <h1>Informacije o Autoru</h1>
+    <p>Ime: {{ authorInfo.ime }}</p>
+    <p>Prezime: {{ authorInfo.prezime }}</p>
+    <p>FOI e-mail: {{ authorInfo.email }} </p>
+    <img src="..//..//assets/profilna.png" alt="Moja Profilna" style="max-width: 20%; max-height: 20%;">
+  </section>
+  
+  <section>
+    <h1>ERA Model</h1>
+    <p>Slika u manjoj veličini:</p>
+    <a href="..//..//assets/ERA_model.png">
+        <img src="..//..//assets/ERA_model.png" alt="ERA Model" style="max-width: 20%; max-height: 20%;">
+    </a>
+  </section>
+  
+  <section>
+    <h1>Tablica 1</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Resurs</th>
+          <th>GET</th>
+          <th>POST</th>
+          <th>PUT</th>
+          <th>DELETE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let resource of resources">
+          <td>{{ resource.url }}</td>
+          <td>{{ resource.get }}</td>
+          <td>{{ resource.post }}</td>
+          <td>{{ resource.put }}</td>
+          <td>{{ resource.delete }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
+  <section>
+    <h1>Tablica 2</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Uloga</th>
+          <th>Stranica/e</th>
+          <th>Opis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let role of roles">
+          <td>{{ role.name }}</td>
+          <td>{{ role.pages }}</td>
+          <td>{{ role.description }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
+  <section>
+    <h1>Implementacija Zadataka</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Zadatak</th>
+          <th>Implementirano</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. Ažuriranje tablica za prvu zadaću</td>
+          <td>Nakon što sam saznao bodove preradio sam REST servise tako da sada rade ovi koji su gore navedeni, te je također tablica sa elementima za klijentsku stranu prerađena i poboljšana.</td>
+        </tr>
+        <tr>
+          <td>2. Kreiranje tablice po koracima</td>
+          <td>Implementirano kao što se može vidjeti.</td>
+        </tr>
+        <tr>
+          <td>3. Složiti package.json za pokretanje servera</td>
+          <td>Implementirano u potpunosti.</td>
+        </tr>
+        <tr>
+          <td>4. Izbrisati ključeve za TMDB servis</td>
+          <td>Riješeno.</td>
+        </tr>
+        <tr>
+          <td>5. Prijenos HTML, CSS, i JS u Angular sa TypeScript-om</td>
+          <td>Postoji klijentska strana za pretraživanje serija, pregled detalja serije, pregled profila, pregled svih korisnika, registraciju korisnika, ažuriranje korisnika, te odjavu i prikazivanje različite navigacije za različite korisnike.</td>
+        </tr>
+        <tr>
+          <td>6. Pozadinski dio poslužuje kompajliranu verziju Angular aplikacije</td>
+          <td>Implementirano.</td>
+        </tr>
+        <tr>
+          <td>7. Pozadinski dio poslužuje dokumentaciju</td>
+          <td>Nije implementirano.</td>
+        </tr>
+        <tr>
+          <td>8. Pozadinski dio nudi podršku kao REST servis</td>
+          <td>Implementirano u potpunosti.</td>
+        </tr>
+        <tr>
+          <td>9. Svi dijelovi osim inicialnog zahtijevaju JWT</td>
+          <td>Implementirano.</td>
+        </tr>
+        <tr>
+          <td>10. Čitanje adrese iz environment datoteke</td>
+          <td>Implementirano.</td>
+        </tr>
+        <tr>
+          <td>11. Dorada dizajna sa Sass preprocesorom</td>
+          <td>Implementirano.</td>
+        </tr>
+        <tr>
+          <td>12. Dodavanje reCaptcha na obrasce</td>
+          <td>Implemnetirano.</td>
+        </tr>
+        <tr>
+          <td>13. Dorada ažuriranja profila i dvorazinske autentifikacije</td>
+          <td>Nije implementirano.</td>
+        </tr>
+        <tr>
+          <td>14. Dorada prijave s dvije razine autentifikacije</td>
+          <td>Nije implementirano.</td>
+        </tr>
+        <tr>
+          <td>15. Dodavanje prijave preko GitHub računa</td>
+          <td>Implementirano.</td>
+        </tr>
+        <tr>
+          <td>16. Spremanje favorita u local storage</td>
+          <td>Nije implementirano.</td>
+        </tr>
+        <tr>
+          <td>17. Postojanje inicijalnog korisnika za svaku ulogu</td>
+          <td>Implementirano.</td>
+        </tr>
+        <tr>
+          <td>18. Dodatni bodovi (npr. dodatna funkcionalnost)</td>
+          <td>Nije implementirano.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
+  <section>Nisam se pozabavio funkcionalnostima dnevnika niti favorita jer sam zaključio da je bitnije riješiti dio koji je vezan za drugu zadaću, odnosno dio s Angularom.</section>
+  

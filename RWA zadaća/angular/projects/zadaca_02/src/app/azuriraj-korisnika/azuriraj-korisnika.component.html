@@ -1,0 +1,17 @@
+<h2>Detalji korisnika</h2>
+<form *ngIf="korisnik" class="form-container" (ngSubmit)="azurirajKorisnika()">
+    <label><strong>Ime:</strong></label>
+    <input [(ngModel)]="korisnik!.ime" name="ime" required>
+
+    <label><strong>Prezime:</strong></label>
+    <input [(ngModel)]="korisnik!.prezime" name="prezime" required>
+
+    <label><strong>Korisničko ime:</strong></label>
+    <input [(ngModel)]="korisnik!.korime" name="korime" required>
+
+    <label><strong>Email:</strong></label>
+    <input [(ngModel)]="korisnik!.email" name="email" required>
+
+    <button type="submit">Ažuriraj</button>
+</form>
+

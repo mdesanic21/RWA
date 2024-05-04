@@ -1,0 +1,25 @@
+<div *ngIf="!loading">
+    <form (submit)="submitForm()">
+        <label for="korime">Korisničko ime:</label>
+        <input type="text" id="korime" [(ngModel)]="korime" required>
+      
+        <label for="lozinka">Lozinka:</label>
+        <input type="password" id="lozinka" [(ngModel)]="lozinka" required>
+      
+        <button type="submit">Prijavi se</button>
+
+        <button class="github" type="button" (click)="githubLogin()">GitHub Login</button>
+        <div *ngIf="loginError">
+            <p>Prijava neuspješna, pokušajte ponovno</p>
+          </div>
+      </form>
+    <p> admin: korisničko ime: admin, lozinka: rwa</p>
+    <p> običan korisnik: korisničko ime: obican`, lozinka: rwa</p> 
+  </div>
+  <div *ngIf="loading">
+    
+    <div class="loading-spinner">
+        Prijava u tijeku...
+      </div>
+  </div>
+  

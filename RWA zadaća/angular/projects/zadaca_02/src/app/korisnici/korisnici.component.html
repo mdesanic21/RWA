@@ -1,0 +1,28 @@
+<div>
+    <h2>Lista korisnika</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Korisničko ime</th>
+                <th>Ime</th>
+                <th>Prezime</th>
+                <th>Email</th>
+                <th>Akcije</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let korisnik of korisnici">
+                <td>{{ korisnik.korime }}</td>
+                <td>{{ korisnik.ime }}</td>
+                <td>{{ korisnik.prezime }}</td>
+                <td>{{ korisnik.email }}</td>
+                <td>
+                    <button (click)="obrisiKorisnika(korisnik.korime)">Obriši</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div *ngIf="errorMessage">
+        <p>{{ errorMessage }}</p>
+      </div>
+</div>

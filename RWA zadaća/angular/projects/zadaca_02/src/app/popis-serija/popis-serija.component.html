@@ -1,0 +1,21 @@
+<p>Tražilica</p>
+<input [(ngModel)]="filter" (keyup)="filtriraj()">
+
+<table>
+  <thead>
+    <tr>
+      <th>Poster</th>
+      <th>Ime</th>
+      <th>Opis</th>
+      <th>Detalji</th> 
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of serije" (click)="prikaziVise(s.id)">
+      <td><img [src]="s.posterPath" alt="Poster"></td>
+      <td>{{ s.naziv }}</td>
+      <td>{{ s.opis }}</td>
+      <td><button (click)="prikaziVise(s.id)">Detalji serije</button></td>
+    </tr>
+  </tbody>
+</table>
